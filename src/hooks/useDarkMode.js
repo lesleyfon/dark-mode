@@ -3,7 +3,7 @@ import { useLocalStorage } from './useLocalStorage';
 import { useEffect } from 'react'
 export const useDarkMode = () => {
     const [darkMode, setDarkMode] = useLocalStorage("isDarkMode", false);
-    const body = document.getElementById('root');
+    const body = document.getElementsByTagName("BODY")[0];
     useEffect(()=>{
     }, [darkMode])
     //ternary to check if darkMode is false or true 

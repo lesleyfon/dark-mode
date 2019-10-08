@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import {Link} from 'react-router-dom'
+
 import Chart from './Chart'
 
 function CoinModal({coin, handleClick}) {
-
     return (
         <>
            {coin.name  ?
@@ -14,7 +15,7 @@ function CoinModal({coin, handleClick}) {
                 </div>
                 <Chart sparklineData = { coin.sparkline_in_7d.price } />
             </div>
-            : <h2>Sorry, No Data to display, Go Home</h2>
+            : <h2>Sorry, No Data to display, <Link to='/'>Go Home</Link></h2>
             
             }
         </>
