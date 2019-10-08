@@ -11,6 +11,7 @@ const App = () => {
   const [coinData, setCoinData] = useState([]);
 
   useEffect(() => {
+    
     fetchCoinData();
   }, []);
 
