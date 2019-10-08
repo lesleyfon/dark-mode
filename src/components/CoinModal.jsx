@@ -1,11 +1,11 @@
 import React from 'react'
-import styled from 'styled-components';
 import Chart from './Chart'
 
 function CoinModal({coin, handleClick}) {
 
     return (
-        <div>
+        <>
+           {coin.name  ?
             <div className="chart__container" key={coin.name} onClick={(e)=>{handleClick(e, coin)}}s>
                 <h2 className="coin__title">{coin.name}</h2>
                 <h4 className="coin__symbol">{coin.symbol}</h4>
@@ -14,7 +14,10 @@ function CoinModal({coin, handleClick}) {
                 </div>
                 <Chart sparklineData = { coin.sparkline_in_7d.price } />
             </div>
-        </div>
+            : <h2>Sorry, No Data to display, Go Home</h2>
+            
+            }
+        </>
     )
 }
 

@@ -241,11 +241,18 @@ text-align: left;
 .coin__logo {
   width: 50px;
 }
-
+a{
+  text-decoration: none;
+  color: #313843;
+}
 .dark-mode {
   color: #fff;
   background-color: #313843;
   height: 100vh;
+  a{
+    text-decoration: none;
+    color: #fff;
+  }
   .navbar {
     background-color: #1F2022;
     border: none;
