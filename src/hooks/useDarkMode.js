@@ -5,7 +5,8 @@ export const useDarkMode = () => {
     const [darkMode, setDarkMode] = useLocalStorage("isDarkMode", false);
     const body = document.getElementsByTagName("BODY")[0];
     useEffect(()=>{
-    }, [darkMode])
+    }, [darkMode]);
+    
     //ternary to check if darkMode is false or true 
     darkMode 
     ?
